@@ -1,17 +1,27 @@
-/* === Animated Gradient Background === */
-body {
+/* === Reset === */
+* {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
+}
+
+/* === Full Viewport Handling === */
+html, body {
+  height: 100%;
+  width: 100%;
+  overflow-x: hidden;
   font-family: Arial, sans-serif;
+}
+
+/* === Animated Gradient Background === */
+body {
   background: linear-gradient(-45deg, #4f46e5, #10b981, #06b6d4, #f43f5e);
   background-size: 400% 400%;
   animation: gradientMove 15s ease infinite;
-  overflow-x: hidden;
-  min-height: 100vh;
-  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 20px;
 }
 
 /* === Gradient Animation === */
@@ -23,8 +33,6 @@ body {
 
 /* === QR Generator Container === */
 .container {
-  position: relative;
-  z-index: 2;
   background: #ffffffdd;
   padding: 30px;
   border-radius: 16px;
@@ -33,7 +41,7 @@ body {
   width: 100%;
   max-width: 350px;
   backdrop-filter: blur(10px);
-  margin: 20px;
+  z-index: 2;
 }
 
 /* === Input Field === */
@@ -44,12 +52,10 @@ input {
   margin-bottom: 20px;
   border: 1px solid #ccc;
   border-radius: 6px;
-  box-sizing: border-box;
 }
 
 /* === Download Button === */
 #downloadBtn {
-  display: none;
   background: #10b981;
   color: #ffffff;
   padding: 10px 20px;
@@ -59,7 +65,6 @@ input {
   margin-top: 15px;
   display: inline-block;
   transition: background 0.3s;
-  box-sizing: border-box;
 }
 
 #downloadBtn:hover {
@@ -98,4 +103,3 @@ input {
     padding: 8px 16px;
   }
 }
-
