@@ -59,7 +59,9 @@ input {
   margin-top: 15px;
   display: inline-block;
   transition: background 0.3s;
+  box-sizing: border-box;
 }
+
 #downloadBtn:hover {
   background: #0e9e6f;
 }
@@ -96,3 +98,4 @@ input {
     padding: 8px 16px;
   }
 }
+
